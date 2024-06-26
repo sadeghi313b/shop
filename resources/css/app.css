@@ -5,3 +5,6 @@
 [x-cloak] {
     display: none;
 }
+
+@import '~bootstrap\dist\css\bootstrap.rtl.css';
+

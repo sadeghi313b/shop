@@ -1,0 +1,29 @@
+@use "sass:math";
+
+
+:root {
+    --header-max-height: 3.5rem;
+    --header-side-width: 14rem;
+    /*// --header-main-width: calc(100% - 14rem); */
+    --avatar-width: 4rem;
+    --avatar-padding: 0.25rem;
+
+}
+$header-height: 3.5rem;
+$aside-width: 14rem;
+
+@function invertColor ($color) {
+    $colorHSL: hsl($bg); // Convert color to HSL format
+    $opposite_hue: if(   lightness($bg_hsl) > 50, 180, 0   );  // Calculate opposite hue value based on the lightness of the background color
+    $opposite_color: hsl($opposite_hue, 100%, 50%); 
+    @return $opposite_color;
+}
+
+@mixin avatar($size: 100px, $circle: true) {
+    width: $size;
+    height: $size;
+  
+    @if $circle {
+      border-radius: math.div($size, 2);
+    }
+  }

@@ -1,0 +1,103 @@
+/* --------------------------------- aside --------------------------------- */
+.aside {
+    background: $aside1bg;
+    // width: 14rem;
+    flex: 0 0 14rem;
+    height: calc(100vh - 3rem);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    &::-webkit-scrollbar {display: none;}
+    @media only screen and (max-width: 768px) {
+        display: none;
+    }
+    
+    &-header {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: invert($color: $aside1bg, $weight: 100%);
+        display: flex;
+        justify-content: space-around;
+        i {
+            $this-bg: lighten($color: $aside1bg, $amount: 30);
+            background: $this-bg;
+            color: monochrome($this-bg);
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+    
+    &-main {
+        $this-padding: 1rem;
+        padding-inline-start: $this-padding;
+        flex-grow: 1;
+        h6 {
+            color: invert($color: $aside1bg, $weight: 100%);
+            font-size: small;
+            margin-top: 1rem;
+            padding-inline-start: 1.7rem;
+        }
+        
+        .toc-container {
+            padding: 0.2rem 0;
+            
+            .toc1  { 
+                display: block;
+                text-decoration: none;
+                cursor: pointer;
+                color: monochrome($aside1bg);
+                padding-top: 0.3rem;
+                transition: all 0.4s;
+                &:hover {
+                    $this-bg: complement($color: $aside1bg);
+                    $this-bg: darken($color: $this-bg, $amount: 15);
+                    letter-spacing: 1px;
+                    background: $this-bg;
+                    color: monochrome($this-bg);
+                    border-inline-start: 3px solid;
+                }
+                .angel { 
+                    float: inline-end;
+                    margin-inline-end: 1rem;
+                }
+            }
+            ul {
+                clear: both;
+                padding-inline-start: $this-padding + 0.3rem;
+                padding-top: 0.3rem;
+                $this-bg: lighten($color: $aside1bg, $amount: 5);
+                background: $this-bg;
+                color: monochrome($this-bg);
+                border-radius: 0 0 0.9rem 0;;
+                .toc2 {
+                    display: block;
+                    text-decoration: none;
+                    color: inherit;
+                    transition: all 0.3s;
+                    padding-inline-start: 0.0rem;
+                    cursor: pointer;
+                    &:hover {
+                        letter-spacing: 1px;
+                        background: $main1bg;
+                        color: monochrome($main1bg);
+                    }
+                }
+            }
+
+        }
+    }
+
+    &-footer {
+        $this-bg: darken($color: $aside1bg, $amount: 7);
+        background: $this-bg;
+        text-align: center;
+        color: invert($this-bg);
+    }
+}
+

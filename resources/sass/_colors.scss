@@ -1,0 +1,78 @@
+//. palette
+$color0: #404E67;
+@function color($degree) { @return adjust-hue($color0, $degree); }   //60, 120, 180
+
+//. bg: backgrounds
+$header1bg: sandybrown;     $header2bg: wheat;
+$aside1bg: #404E67;         $aside2bg: wheat;
+$main1bg: wheat;            $main2bg:  wheat;
+$footer1bg:  wheat;         $footer2bg:  wheat;
+$blueBtn_bg: MidnightBlue;
+
+
+//. aside
+$aside_activeBg: $main1bg;
+$toc1bg: wheat;                         $toc1bghover: complement($toc1bg);                        
+$toc2bg: wheat;                             $toc2bghover: complement($toc2bg);
+$asideBtn_bg: $blueBtn_bg;                  $aside_btnHoverCl: complement($asideBtn_bg);
+$toc1cl: monochrome($aside1bg);                   
+$toc1hoverCl: complement($asideBtn_bg);
+$toc2cl: invert($toc2bg);                   $toc2hoverCl: complement($toc2cl);
+
+//. cl: typegraphy colors
+
+//. gradients
+$linear-gradient-1: linear-gradient(45deg, #FFD12A, #FFB547, #FF9863, #FF7B80, #FF5E9D);
+
+//. bg-customStyles
+.bg-orange-gradient {
+  $this-bg:darkorange;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-DarkBlue-gradient {
+  $this-bg:DarkBlue;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-DarkGreen-gradient {
+  $this-bg:DarkGreen;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-DarkMagenta-gradient {
+  $this-bg:DarkMagenta;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-DeepPink-gradient {
+  $this-bg:DeepPink;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-MediumVioletRed-gradient {
+  $this-bg:MediumVioletRed;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-Olive-gradient {
+  $this-bg:Olive;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-Peru-gradient {
+  $this-bg:Peru;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-Teal-gradient {
+  $this-bg:Teal;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+.bg-YellowGreen-gradient {
+  $this-bg:YellowGreen;
+  background-image: linear-gradient( $this-bg,darken($this-bg,20) );
+}
+
+/* ------------------------------- . functions ------------------------------ */
+@function monochrome($color) {
+    $lightness: lightness($color);
+    @if $lightness > 50% {
+      @return black;
+    } @else {
+      @return white;
+    }
+  }
+  

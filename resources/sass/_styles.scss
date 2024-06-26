@@ -1,0 +1,12 @@
+.body-container {
+    display: flex;
+    margin-top: $header-height;
+    .main {
+        flex-grow: 1;
+        // z-index: 1000 ;
+        background: $main1bg;
+    }
+}
+
+
+

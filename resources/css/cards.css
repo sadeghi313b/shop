@@ -1,0 +1,14 @@
+.cards {
+  margin: 1rem;
+}
+
+.each-card-container a {
+  padding: 1rem 0;
+}
+.each-card-container hr {
+  margin: 0.7rem;
+}
+.each-card-container .card-footer {
+  color: lightgray;
+  font-size: 0.7rem;
+}/*# sourceMappingURL=cards.css.map */

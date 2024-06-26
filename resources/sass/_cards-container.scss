@@ -1,0 +1,26 @@
+.cards-container {
+    margin: 1rem 0.5rem;
+    
+}
+
+.each-card-container {
+    padding: 0;
+    .each-card {
+        margin: 0.5rem;
+        padding: 1rem 0;
+        transition: all 0.3s;
+        &:hover {
+            transform: scale(1.05);
+            background: maroon;
+        }
+    }
+    
+    hr {
+        margin: 0.7rem;
+    }
+    
+    .card-footer {
+        color: lightgray;
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,107 @@
+
+.header {
+    background: $linear-gradient-1;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 0;
+    width: 100%;
+    line-height: $header-height;
+    justify-content: space-around;
+    align-content: stretch;
+
+    .header-side {
+        flex: 0 0 $aside-width;
+        background: $aside1bg;
+        color: monochrome($aside1bg);
+        .fas {
+            font-size: 2rem;
+        }
+    }
+    
+    .header-main {
+        flex-grow: 1;
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+}
+
+
+.search-area {
+    background: wheat;
+    padding: 0.4rem 0.6rem 0.2rem 0.6rem;
+    border-radius: 2rem;
+}
+.search-input {
+    background: transparent;
+    border: none;
+    margin: 0 0.6rem;
+}
+
+.notification-container {
+    position: relative;
+}
+
+.notification-modal {
+    position: absolute;
+    background: lightgray;
+    width: 300px;
+    max-height: 80vh;
+    /*// right: -253px; */
+    /* border: 1px solid grey; */
+    border: none;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+.notification-modal::-webkit-scrollbar {
+    display: none;
+}
+
+/* card: image, title, body, footer */
+.card-image-aside {
+    line-height: 1rem;
+    display: flex;
+    max-height: var(--avatar-width);
+}
+.card-image-aside > data {
+    margin-inline-start: 0.25rem;
+    display: inline-block;
+    max-width: calc(100% - var(--avatar-width) - var(--avatar-padding));
+    max-height: 100%;
+}
+.card-image-aside > data > h5 {
+    line-height: 1rem;
+    margin-top: 0.5rem;
+    display: inline;
+}
+.card-image-aside > data > time {
+    line-height: 0;
+    margin:0.5rem 0 -1rem 5px;
+    color: gray;
+    font-size: smaller;
+    float: inline-end;
+    font-size: x-small;
+    direction: ltr;
+}
+.card-image-aside > data > div {
+    line-height: 1.25rem;
+    margin-top: 0.25rem;
+    color: dimgray;
+    display: inline-block;
+    width: 100%;
+    height: calc(100% - 1.5rem);
+    overflow: hidden;
+    /* text-wrap: nowrap; */
+    text-overflow: ellipsis;
+    text-justify:distribute;
+}
+
+sup {
+    margin: 0 -0.3rem;
+}
+
+
+.logo {
+    max-height: var(--header-max-height);
+}
