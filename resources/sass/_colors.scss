@@ -4,20 +4,12 @@ $color0: #404E67;
 
 //. bg: backgrounds
 $header1bg: sandybrown;     $header2bg: wheat;
-$aside1bg: #404E67;         $aside2bg: wheat;
 $main1bg: wheat;            $main2bg:  wheat;
 $footer1bg:  wheat;         $footer2bg:  wheat;
 $blueBtn_bg: MidnightBlue;
 
 
-//. aside
-$aside_activeBg: $main1bg;
-$toc1bg: wheat;                         $toc1bghover: complement($toc1bg);                        
-$toc2bg: wheat;                             $toc2bghover: complement($toc2bg);
-$asideBtn_bg: $blueBtn_bg;                  $aside_btnHoverCl: complement($asideBtn_bg);
-$toc1cl: monochrome($aside1bg);                   
-$toc1hoverCl: complement($asideBtn_bg);
-$toc2cl: invert($toc2bg);                   $toc2hoverCl: complement($toc2cl);
+
 
 //. cl: typegraphy colors
 

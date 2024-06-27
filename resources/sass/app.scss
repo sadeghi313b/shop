@@ -3,32 +3,3 @@
 
 // Variables
 @import 'variables';
-
-// Bootstrap
-@import 'bootstrap/scss/bootstrap';
-@import '~bootstrap\dist\css\bootstrap.rtl.css';
-
-
-
-// user-defined
-@import "reset";
-
-@import "typography";
-@import "colors";
-@import "definitions";   //mixins, variables, placeholders, etc
-
-@import "overall-styles";
-@import "normalize";
-
-@import "grid";
-@import "animations";
-@import "responsive";
-
-
-@import "styles";
-@import "./apps/header";
-@import "./apps/aside";
-@import "./apps/cards-container";
-
-@import "temp";
-

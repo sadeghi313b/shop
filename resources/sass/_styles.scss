@@ -9,4 +9,11 @@
 }
 
 
+.hovered-dropdown-container:hover > .hovered-dropdown-trigger {
+    background: lightgray;
+    border: 5px solid lightgray;
+    border-radius: 5px 5px 0 0;
+    // transform: translateY(-10px);
+}
+
 

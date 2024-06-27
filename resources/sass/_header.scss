@@ -12,10 +12,11 @@
 
     .header-side {
         flex: 0 0 $aside-width;
-        background: $aside1bg;
-        color: monochrome($aside1bg);
+        background: $sidebar-bg-1;
+        color: monochrome($sidebar-bg-1);
         .fas {
             font-size: 2rem;
+            color: $sidebar-btn-bg;
         }
     }
     
@@ -45,11 +46,12 @@
 
 .notification-modal {
     position: absolute;
+    // top: 1.2rem;
     background: lightgray;
     width: 300px;
     max-height: 80vh;
-    /*// right: -253px; */
-    /* border: 1px solid grey; */
+    left: 0px !important;
+    z-index: 1;
     border: none;
     border-radius: 5px;
     overflow-y: auto;
@@ -104,4 +106,5 @@ sup {
 
 .logo {
     max-height: var(--header-max-height);
+    max-width: calc($aside-width - 5rem);
 }

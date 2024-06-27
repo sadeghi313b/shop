@@ -1,6 +1,13 @@
-/* --------------------------------- aside --------------------------------- */
+/* ------------------------------- definitions ------------------------------ */
+
+
+
+
+
+
+/* --------------------------------- styles --------------------------------- */
 .aside {
-    background: $aside1bg;
+    background: $sidebar-bg-1;
     // width: 14rem;
     flex: 0 0 14rem;
     height: calc(100vh - 3rem);
@@ -15,13 +22,12 @@
     &-header {
         margin-top: 1rem;
         margin-bottom: 1rem;
-        color: invert($color: $aside1bg, $weight: 100%);
+        color: $sidebar-cl-1;
         display: flex;
         justify-content: space-around;
         i {
-            $this-bg: lighten($color: $aside1bg, $amount: 30);
-            background: $this-bg;
-            color: monochrome($this-bg);
+            background: $sidebar-btn-bg;
+            color: $sidebar-btn-cl;
             width: 1.5rem;
             height: 1.5rem;
             border-radius: 5px;
@@ -38,7 +44,7 @@
         padding-inline-start: $this-padding;
         flex-grow: 1;
         h6 {
-            color: invert($color: $aside1bg, $weight: 100%);
+            color: invert($color: $sidebar-bg-1, $weight: 100%);
             font-size: small;
             margin-top: 1rem;
             padding-inline-start: 1.7rem;
@@ -51,11 +57,11 @@
                 display: block;
                 text-decoration: none;
                 cursor: pointer;
-                color: monochrome($aside1bg);
+                color: monochrome($sidebar-bg-1);
                 padding-top: 0.3rem;
                 transition: all 0.4s;
                 &:hover {
-                    $this-bg: complement($color: $aside1bg);
+                    $this-bg: complement($color: $sidebar-bg-1);
                     $this-bg: darken($color: $this-bg, $amount: 15);
                     letter-spacing: 1px;
                     background: $this-bg;
@@ -71,7 +77,7 @@
                 clear: both;
                 padding-inline-start: $this-padding + 0.3rem;
                 padding-top: 0.3rem;
-                $this-bg: lighten($color: $aside1bg, $amount: 5);
+                $this-bg: lighten($color: $sidebar-bg-1, $amount: 5);
                 background: $this-bg;
                 color: monochrome($this-bg);
                 border-radius: 0 0 0.9rem 0;;
@@ -94,7 +100,7 @@
     }
 
     &-footer {
-        $this-bg: darken($color: $aside1bg, $amount: 7);
+        $this-bg: darken($color: $sidebar-bg-1, $amount: 7);
         background: $this-bg;
         text-align: center;
         color: invert($this-bg);

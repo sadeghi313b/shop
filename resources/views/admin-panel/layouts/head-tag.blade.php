@@ -8,4 +8,4 @@
 <link rel="stylesheet" href="{{ mix('node_modules/animate.css/animate.min.css') }}">
 
 <!-- user-defined style sheets -->
-<link rel="stylesheet" href="{{ mix('resources/css/main.css') }}">
+<link rel="stylesheet" href="{{ mix('public/css/main.css') }}">

@@ -5,3 +5,26 @@ $body-bg: #f8fafc;
 $font-family-sans-serif: 'Nunito', sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+//. aside
+$sidebar-bg-1: #404E67;
+$sidebar-cl-1:invert($color: $sidebar-bg-1, $weight: 100%);
+$sidebar-bg-2: #404E67;
+$sidebar-cl-2:invert($color: $sidebar-bg-1, $weight: 100%);
+
+$toc1-bg: wheat;
+$toc1-cl: monochrome($toc1-bg);
+$toc1-hover-bg: complement($toc1-bg);                        
+$toc1-hover-cl: complement($toc1-cl);
+
+$toc2-bg: wheat;
+$toc2-cl: monochrome($toc2-bg);
+$toc2-hover-bg: complement($toc2-bg);                        
+$toc2-hover-cl: complement($toc2-cl);
+
+$sidebar-btn-bg: lighten($color: $sidebar-bg-1, $amount: 30);                  
+$sidebar-btn-cl: monochrome($sidebar-btn-bg);       
+$sidebar-btn-hover-bg: complement($sidebar-btn-bg);
+$sidebar-btn-hover-cl: complement($sidebar-btn-cl);
+
+// $sidebar-showhide-

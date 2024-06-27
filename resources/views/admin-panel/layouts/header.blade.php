@@ -4,8 +4,7 @@
     <!-- ----------------------------------------------------------------------- -->
     <aside class="header-side">
         <section class="d-flex justify-content-between flex-row-reverse px-2">
-            <!--. toggle icon -->
-            <!-- fa-toggle-on | fa-toggle-off -->
+            <!--. toggle icon --><!-- fa-toggle-on | fa-toggle-off -->
             <span class="d-none d-md-inline">
                 <i class="fas fa-toggle-on fa-lg pointer" title="show | hide : sidebar"
                     onclick="toggleDisplay(this, 'sidebar', 'fa-toggle-on', 'fa-toggle-off')">
@@ -13,7 +12,7 @@
             </span>    
             <!--. Logo: png -->
             <span>
-                <img src="/assets/images/logo/rectangle/logo-white-png.png" alt="" class="logo">
+                <img src="{{ asset('admin-panel/images/logo/rectangle/logo-white-png.png') }}" alt="" class="logo">
             </span>   
             <!--. hamburger menu: next section -->
             <span class="d-md-none"><i class="fas fa-bars pointer"></i></span>                  
@@ -47,225 +46,78 @@
             </article>
             <!-- ------------------------------ article 2 ------------------------------ -->
             <article>
+
                 <!--. notifications -->
-                <span class="notification-container">
+                <span class="notification-container hovered-dropdown-container">
                     <!--* single icon -->
-                    <span>
+                    <span class="hovered-dropdown-trigger">
                         <sup class="badge bg-danger rounded-circle">3</sup>
                         <i class="fa-regular fa-bell pointer"></i>
                     </span>
                     <!--* modal box -->
-                    <dialog class="notification-modal p-1 positiony-end">
+                    <!-- <dialog open> -->
+                    <dialog class="notification-modal hovered-dropdown-content p-1">
                         <hgroup class=" lh-lg">
                             <span class="ms-2">نوتیفیکیشن</span>
                             <span class="me-2 badge bg-danger float-end">جدید</span>
                         </hgroup>
                         <ul class="list-group">
-                            <!--. one notification -->
+                            @for ($i=1;$i<=5;$i++)
                             <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
                                 <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
+                                    <img src="{{ asset('admin-panel/images/users/avatar1.png') }}" alt="avatar" class="rounded-circle avatar">
                                     <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
+                                        <h5 class="small">علیرضا</h5>
+                                        <time class="float-end">1403/03/02 16:48</time>
+                                        <div class="small">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
                                     </data>
                                 </div>
                             </li>
-                            <!--. one notification *********-->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
+                            @endfor
                         </ul>
                     </dialog>
                 </span>
+
                 <!--. comments -->
-                <span class="notification-container">
+                <span class="notification-container hovered-dropdown-container">
                     <!--* single icon -->
-                    <span class="ms-3 ms-md-5">
+                    <span class="hovered-dropdown-trigger ms-3 ms-md-5">
                         <sup class="badge bg-danger rounded-circle">3</sup>
                         <i class="far fa-comment-alt pointer"></i>
                     </span>
                     <!--* modal box -->
-                    <dialog class="notification-modal p-1 positiony-end">
+                    <dialog class="notification-modal hovered-dropdown-content p-1">
                         <hgroup class="lh-lg my-4 mx-2 bb">
                             <input type="text" placeholder="جستجو ..." class="form-control form-control-sm">
                         </hgroup>
                         <ul class="list-group">
-                            <!--. one notification -->
+                            @for ($i=1;$i<=15;$i++)
                             <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
                                 <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
+                                    <img src="{{ asset('admin-panel/images/users/avatar1.png') }}" alt="avatar" class="rounded-circle avatar">
                                     <data class="small"> 
-                                        <h5>محسن</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
+                                        <h5 class="small">علیرضا</h5>
+                                        <time class="float-end">1403/03/02 16:48</time>
+                                        <div class="small">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
                                     </data>
                                 </div>
                             </li>
-                            <!--. one notification *********-->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>امیر</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
-                            <!--. one notification -->
-                            <li class="list-group-item list-group-item-action mb-1"  style="padding: 3px;">
-                                <div class="card-image-aside">
-                                    <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar">
-                                    <data class="small"> 
-                                        <h5>علیرضا</h5>
-                                        <time>1403/03/02 16:48</time>
-                                        <div>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که </div>
-                                    </data>
-                                </div>
-                            </li>
+                            @endfor
                         </ul>
                     </dialog>
                 </span>
+                
                 <!--. user area -->
-                <span class="notification-container">
+                <span class="notification-container hovered-dropdown-container">
                     <!--* single icon -->
-                    <span class="ms-3 ms-md-5">
-                        <img src="../../assets/images/users/avatar1.png" alt="avatar" class="rounded-circle avatar-xsmall">
+                    <span class="hovered-dropdown-trigger ms-3 ms-md-5">
+                        <img src="{{ asset('admin-panel/images/users/avatar1.png') }}" alt="avatar" class="rounded-circle avatar-xsmall">
                         <span class="small">سید علیرضا مجتبایی نسب</span>
                         <i class="fas fa-angle-down me-3 pointer"></i>
                     </span>
                     <!--* modal box -->
-                    <dialog class="border-0 rounded-2 bg-body-secondary p-2 positiony-end" style="width: 13rem;">
+                    <dialog class="hovered-dropdown-content border-0 rounded-2 bg-body-secondary p-2" 
+                            style="width: 13rem; position:absolute; top:1.5rem; left: 0px !important;">
                         <div class="list-group lh-1">
                             <a href="#" class="list-group-item list-group-item-action d-flex align-items-center p-0">
                                 <i class="fas fa-cog p-2"></i>
@@ -295,6 +147,7 @@
                 <span class="temp"></span>
                 
             </article>
+            <!-- ---------------------------- end of article 2 ---------------------------- -->
         </section>
     </main>
 </header>
@@ -302,24 +155,3 @@
 
 
 
-<script>
-    $(".temp").load("./temp.html");
-
-    function positionElement(element) {
-        const parent = element.parentElement;
-        const parentWidth = parent.offsetWidth;
-        const elementWidth = element.offsetWidth;
-
-        // Calculate the offset from the right edge of the parent
-        const widthDiff = parentWidth - elementWidth;
-        if (document.dir === 'rtl') {
-            element.style.right = `${widthDiff}px`;
-        }else{
-            element.style.left = `${widthDiff}px`;
-        }
-    }
-    const elems = document.querySelectorAll('.positiony-end');
-    elems.forEach(elem => {
-        positionElement(elem);
-    });
-</script>

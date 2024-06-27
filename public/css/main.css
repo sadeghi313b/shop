@@ -100,6 +100,12 @@ html {
   background: wheat;
 }
 
+.hovered-dropdown-container:hover > .hovered-dropdown-trigger {
+  background: lightgray;
+  border: 5px solid lightgray;
+  border-radius: 5px 5px 0 0;
+}
+
 .header {
   background: linear-gradient(45deg, #FFD12A, #FFB547, #FF9863, #FF7B80, #FF5E9D);
   position: fixed;
@@ -118,6 +124,7 @@ html {
 }
 .header .header-side .fas {
   font-size: 2rem;
+  color: #8a9ab6;
 }
 .header .header-main {
   flex-grow: 1;
@@ -149,8 +156,8 @@ html {
   background: lightgray;
   width: 300px;
   max-height: 80vh;
-  /*// right: -253px; */
-  /* border: 1px solid grey; */
+  left: 0px !important;
+  z-index: 1;
   border: none;
   border-radius: 5px;
   overflow-y: auto;
@@ -209,9 +216,11 @@ sup {
 
 .logo {
   max-height: var(--header-max-height);
+  max-width: 9rem;
 }
 
-/* --------------------------------- aside --------------------------------- */
+/* ------------------------------- definitions ------------------------------ */
+/* --------------------------------- styles --------------------------------- */
 .aside {
   background: #404E67;
   flex: 0 0 14rem;
