@@ -106,6 +106,14 @@ html {
   border-radius: 5px 5px 0 0;
 }
 
+.maxh-1o5rem {
+  max-height: 1.5rem;
+}
+
+.minw-5rem {
+  min-width: 5rem;
+}
+
 .header {
   background: linear-gradient(45deg, #FFD12A, #FFB547, #FF9863, #FF7B80, #FF5E9D);
   position: fixed;
@@ -219,32 +227,34 @@ sup {
   max-width: 9rem;
 }
 
-/* ------------------------------- definitions ------------------------------ */
-/* --------------------------------- styles --------------------------------- */
-.aside {
+/* -------------------------------------------------------------------------- */
+/*                                   sidebar                                  */
+/* -------------------------------------------------------------------------- */
+.sidebar {
   background: #404E67;
   flex: 0 0 14rem;
   height: calc(100vh - 3rem);
-  overflow: auto;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
-.aside::-webkit-scrollbar {
+.sidebar::-webkit-scrollbar {
   display: none;
 }
 @media only screen and (max-width: 768px) {
-  .aside {
+  .sidebar {
     display: none;
   }
 }
-.aside-header {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.sidebar-header {
+  background-image: radial-gradient(ellipse closest-side, #6a7fa3, #404E67);
   color: #bfb198;
+  margin: 0.5rem 1rem 1rem 1rem;
+  padding: 0.2rem;
   display: flex;
   justify-content: space-around;
 }
-.aside-header i {
+.sidebar-header i {
   background: #8a9ab6;
   color: black;
   width: 1.5rem;
@@ -256,62 +266,67 @@ sup {
   justify-content: center;
   cursor: pointer;
 }
-.aside-main {
-  padding-inline-start: 1rem;
-  flex-grow: 1;
-}
-.aside-main h6 {
-  color: #bfb198;
-  font-size: small;
-  margin-top: 1rem;
-  padding-inline-start: 1.7rem;
-}
-.aside-main .toc-container {
-  padding: 0.2rem 0;
-}
-.aside-main .toc-container .toc1 {
-  display: block;
-  text-decoration: none;
-  cursor: pointer;
-  color: white;
-  padding-top: 0.3rem;
-  transition: all 0.4s;
-}
-.aside-main .toc-container .toc1:hover {
-  letter-spacing: 1px;
-  background: #383023;
-  color: white;
-  border-inline-start: 3px solid;
-}
-.aside-main .toc-container .toc1 .angel {
-  float: inline-end;
-  margin-inline-end: 1rem;
-}
-.aside-main .toc-container ul {
-  clear: both;
-  padding-inline-start: 1.3rem;
-  padding-top: 0.3rem;
-  background: #4a5a77;
-  color: white;
-  border-radius: 0 0 0.9rem 0;
-}
-.aside-main .toc-container ul .toc2 {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.3s;
-  padding-inline-start: 0rem;
-  cursor: pointer;
-}
-.aside-main .toc-container ul .toc2:hover {
-  letter-spacing: 1px;
-  background: wheat;
-  color: black;
-}
-.aside-footer {
+.sidebar-footer {
   background: #323d51;
   text-align: center;
   color: #cdc2ae;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    tocs                                    */
+/* -------------------------------------------------------------------------- */
+.sidebar section {
+  /* ------------------------------- header - hr ------------------------------ */
+  /* ----------------------------------- h1 ----------------------------------- */
+  /* ----------------------------------- h2 ----------------------------------- */
+}
+.sidebar section header {
+  z-index: 1;
+  text-align: center;
+  color: #bfb198;
+  font-size: small;
+  margin-top: 2rem;
+}
+.sidebar section hr {
+  margin: -0.7rem;
+  padding: 0 1rem 0 1rem;
+}
+.sidebar section h1, .sidebar section .toc1 {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: yellow;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  transition: all 0.4s;
+}
+.sidebar section h1:hover, .sidebar section .toc1:hover {
+  letter-spacing: 1px;
+  background: #bfb198;
+  color: yellow;
+  border-inline-start: 5px solid;
+}
+.sidebar section h1 .angle, .sidebar section .toc1 .angle {
+  margin-inline-start: auto;
+}
+.sidebar section h2, .sidebar section .toc2 {
+  display: block;
+  padding-inline-start: 0.5rem;
+  font-size: 0.6rem;
+  font-weight: lighter;
+  line-height: 1.8rem;
+  color: white;
+  text-decoration: none;
+  border-radius: 0 0 0.9rem 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sidebar section h2:hover, .sidebar section .toc2:hover {
+  letter-spacing: 1px;
+  background: #77674a;
+  color: white;
 }
 
 .cards-container {
@@ -336,6 +351,16 @@ sup {
 .each-card-container .card-footer {
   color: lightgray;
   font-size: 0.7rem;
+}
+
+.breadcrumb .breadcrumb-item a {
+  transition: all 0.9sec;
+  text-decoration: none;
+}
+.breadcrumb .breadcrumb-item a:hover {
+  letter-spacing: 1px;
+  color: darkblue;
+  font-weight: bold;
 }
 
 .bb {

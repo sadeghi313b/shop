@@ -12,19 +12,20 @@ $sidebar-cl-1:invert($color: $sidebar-bg-1, $weight: 100%);
 $sidebar-bg-2: #404E67;
 $sidebar-cl-2:invert($color: $sidebar-bg-1, $weight: 100%);
 
-$toc1-bg: wheat;
-$toc1-cl: monochrome($toc1-bg);
-$toc1-hover-bg: complement($toc1-bg);                        
-$toc1-hover-cl: complement($toc1-cl);
+$toc1-bg: $sidebar-bg-1;
+$toc1-cl: yellow;
+$toc1-hover-bg: invert($toc1-bg);                        
+$toc1-hover-cl: monochrome($toc1-hover-bg);
 
-$toc2-bg: wheat;
+$toc2-bg: lighten($color: $sidebar-bg-1, $amount: 5);
 $toc2-cl: monochrome($toc2-bg);
 $toc2-hover-bg: complement($toc2-bg);                        
-$toc2-hover-cl: complement($toc2-cl);
+$toc2-hover-cl: monochrome($toc2-hover-bg);
 
 $sidebar-btn-bg: lighten($color: $sidebar-bg-1, $amount: 30);                  
 $sidebar-btn-cl: monochrome($sidebar-btn-bg);       
 $sidebar-btn-hover-bg: complement($sidebar-btn-bg);
 $sidebar-btn-hover-cl: complement($sidebar-btn-cl);
 
-// $sidebar-showhide-
+//. breadcrumb
+$breadcrumb-item-padding-x: 0.2rem;

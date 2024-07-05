@@ -1,28 +1,27 @@
-/* ------------------------------- definitions ------------------------------ */
-
-
-
-
-
-
-/* --------------------------------- styles --------------------------------- */
-.aside {
+/* -------------------------------------------------------------------------- */
+/*                                   sidebar                                  */
+/* -------------------------------------------------------------------------- */
+.sidebar {
     background: $sidebar-bg-1;
-    // width: 14rem;
     flex: 0 0 14rem;
     height: calc(100vh - 3rem);
-    overflow: auto;
     display: flex;
     flex-direction: column;
+    
+    overflow: auto;
     &::-webkit-scrollbar {display: none;}
+
     @media only screen and (max-width: 768px) {
         display: none;
     }
-    
+
     &-header {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-        color: $sidebar-cl-1;
+        $color1:lighten($sidebar-bg-1,20%);
+        $color2:$sidebar-bg-1;
+        background-image: radial-gradient(ellipse closest-side, $color1, $color2);
+        color: $sidebar-cl-1; 
+        margin: 0.5rem 1rem 1rem 1rem;
+        padding: 0.2rem;
         display: flex;
         justify-content: space-around;
         i {
@@ -39,65 +38,7 @@
         }
     }
     
-    &-main {
-        $this-padding: 1rem;
-        padding-inline-start: $this-padding;
-        flex-grow: 1;
-        h6 {
-            color: invert($color: $sidebar-bg-1, $weight: 100%);
-            font-size: small;
-            margin-top: 1rem;
-            padding-inline-start: 1.7rem;
-        }
-        
-        .toc-container {
-            padding: 0.2rem 0;
-            
-            .toc1  { 
-                display: block;
-                text-decoration: none;
-                cursor: pointer;
-                color: monochrome($sidebar-bg-1);
-                padding-top: 0.3rem;
-                transition: all 0.4s;
-                &:hover {
-                    $this-bg: complement($color: $sidebar-bg-1);
-                    $this-bg: darken($color: $this-bg, $amount: 15);
-                    letter-spacing: 1px;
-                    background: $this-bg;
-                    color: monochrome($this-bg);
-                    border-inline-start: 3px solid;
-                }
-                .angel { 
-                    float: inline-end;
-                    margin-inline-end: 1rem;
-                }
-            }
-            ul {
-                clear: both;
-                padding-inline-start: $this-padding + 0.3rem;
-                padding-top: 0.3rem;
-                $this-bg: lighten($color: $sidebar-bg-1, $amount: 5);
-                background: $this-bg;
-                color: monochrome($this-bg);
-                border-radius: 0 0 0.9rem 0;;
-                .toc2 {
-                    display: block;
-                    text-decoration: none;
-                    color: inherit;
-                    transition: all 0.3s;
-                    padding-inline-start: 0.0rem;
-                    cursor: pointer;
-                    &:hover {
-                        letter-spacing: 1px;
-                        background: $main1bg;
-                        color: monochrome($main1bg);
-                    }
-                }
-            }
-
-        }
-    }
+    
 
     &-footer {
         $this-bg: darken($color: $sidebar-bg-1, $amount: 7);
@@ -105,5 +46,66 @@
         text-align: center;
         color: invert($this-bg);
     }
+    
 }
 
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    tocs                                    */
+/* -------------------------------------------------------------------------- */
+.sidebar {
+    section {
+        /* ------------------------------- header - hr ------------------------------ */
+        header {
+            z-index: 1;
+            text-align: center;
+            color: invert($color: $sidebar-bg-1, $weight: 100%);
+            font-size: small;
+            margin-top: 2rem;
+        }
+        hr {
+            margin: -0.7rem;
+            padding: 0 1rem 0 1rem;
+        }
+        /* ----------------------------------- h1 ----------------------------------- */
+        h1, .toc1 {
+            display: flex; align-items: center; gap: 0.3rem;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            color: $toc1-cl;
+            padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+            transition: all 0.4s;
+            
+            &:hover {
+                letter-spacing: 1px;
+                background: $toc1-hover-bg;
+                color: $toc1-cl;
+                border-inline-start: 5px solid;
+            }
+        }
+        h1, .toc1 {
+            .angle { 
+                // float: inline-end;
+                margin-inline-start: auto;
+            }
+        }
+        /* ----------------------------------- h2 ----------------------------------- */
+        h2, .toc2 {
+            display: block;
+            padding-inline-start: 0.5rem;
+            font-size: 0.6rem; font-weight:lighter; line-height: 1.8rem; color: $toc2-cl;
+            text-decoration: none;
+            border-radius: 0 0 0.9rem 0;
+            cursor: pointer;
+            transition: all 0.3s;
+
+            &:hover {
+                letter-spacing: 1px;
+                background: $toc2-hover-bg;
+                color: $toc2-hover-cl;
+            }
+        }
+    }
+}

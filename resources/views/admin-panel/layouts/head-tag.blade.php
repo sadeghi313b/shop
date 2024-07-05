@@ -9,3 +9,4 @@
 
 <!-- user-defined style sheets -->
 <link rel="stylesheet" href="{{ mix('public/css/main.css') }}">
+ 

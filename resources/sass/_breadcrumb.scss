@@ -1,0 +1,14 @@
+.breadcrumb {
+    .breadcrumb-item {
+        a {
+            transition: all 0.9sec;
+            text-decoration: none;
+
+            &:hover {
+                letter-spacing: 1px;
+                color: darkblue;
+                font-weight:bold;
+            }
+        }
+    }
+}
