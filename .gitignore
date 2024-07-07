@@ -19,5 +19,6 @@ yarn-error.log
 /.idea
 /.vscode
 
-# user-defined
+# my-defined
 /node_modules/
+/z-myfolder

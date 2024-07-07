@@ -47,7 +47,7 @@
     <article class="table-responsive">
         <table class="table table-light table-striped table-hover">
             <thead class="">
-                <tr>
+                <tr class="text-center">
                     <th>#</th>
                     <th>نام دسته بندی</th>
                     <th>دستۀ والد</th>
@@ -55,7 +55,8 @@
                 </tr>
             </thead>
             <tbody>
-                @for ($i=1;$i<5;$i++) <tr>
+                @for ($i=1;$i<=5;$i++) 
+                <tr class="text-center">
                     <td>12</td>
                     <td>نمایشگر</td>
                     <td>کالای الکترونیک</td>

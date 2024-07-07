@@ -1,4 +1,4 @@
-<script src="{{ mix('node_modules/@popperjs/core/dist/cjs/popper.js') }}"></script>
+<!-- <script src="{{ mix('node_modules/@popperjs/core/dist/cjs/popper.js') }}"></script> -->
 <script src="{{ mix('node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 <script src="{{ mix('resources/js/app.js') }}"></script>
 

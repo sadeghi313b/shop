@@ -41,6 +41,7 @@
     <!-- form -->
     <article class="p-3 clearfix ">
         <form action="" method="">
+        @csrf
             <fieldset class="row align-items-center">
                 <div class="col-12 col-lg-6 form-floating p-1">
                     <input type="text" name="cat-name" class="form-control" placeholder="نام دسته را وارد کنید ...">
